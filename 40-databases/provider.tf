@@ -8,9 +8,8 @@ terraform {
 
   backend "s3" {
     bucket = "pramod-daws"
-    key    = "roboshop-dev-databases"
+    key    = "roboshop-dev-backend-alb"
     region = "us-east-1"
-    use_lockfile = true
     encrypt = true
   }
 }
