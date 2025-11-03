@@ -24,7 +24,6 @@ resource "terraform_data" "mongodb" {
     host     = aws_instance.mongodb.private_ip
   }
 
-
   provisioner "remote-exec" {
     inline = [
         "echo Hello World"
