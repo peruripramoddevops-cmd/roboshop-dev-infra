@@ -7,9 +7,9 @@ variable "environment" {
 }
 
 variable "zone_id" {
-    default = "Z0948150OFPSYTNVYZOY"
+    default = "Z05714843SO1YQWMF1N5N"
 }
 
 variable "domain_name" {
-    default = "daws86s.fun"
+    default = "pramod.shop"
 }
