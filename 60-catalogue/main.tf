@@ -158,7 +158,7 @@ resource "aws_autoscaling_group" "catalogue" {
 }
 
 
-resource "aws_autoscaling_policy" "example" {
+resource "aws_autoscaling_policy" "catalogue" {
   autoscaling_group_name = aws_autoscaling_group.catalogue.name
   name                   = "${local.common_name_suffix}-catalogue"
   policy_type            = "TargetTrackingScaling"
@@ -193,7 +193,7 @@ resource "terraform_data" "catalogue_local" {
     aws_instance.catalogue.id
   ]
   
-  depends_on = [aws_autoscaling_policy.example]
+  depends_on = [aws_autoscaling_policy.catalogue]
   provisioner "local-exec" {
     command = "aws ec2 terminate-instances --instance-ids ${aws_instance.catalogue.id}"
   }
