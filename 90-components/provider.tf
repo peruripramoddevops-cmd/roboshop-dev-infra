@@ -7,7 +7,7 @@ terraform {
   }
 
   backend "s3" {
-    bucket = "pramods-daws"
+    bucket = "pramod-daws"
     key    = "roboshop-dev-components"
     region = "us-east-1"
     use_lockfile = true
